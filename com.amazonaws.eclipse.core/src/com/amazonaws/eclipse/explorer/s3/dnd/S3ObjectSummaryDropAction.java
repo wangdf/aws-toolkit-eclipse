@@ -13,9 +13,9 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.jobs.Job;
-import org.eclipse.jdt.core.IJavaElement;
-import org.eclipse.jdt.core.IJavaProject;
-import org.eclipse.jdt.core.JavaModelException;
+//import org.eclipse.jdt.core.IJavaElement;
+//import org.eclipse.jdt.core.IJavaProject;
+//import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.FileDialog;
@@ -39,7 +39,7 @@ public class S3ObjectSummaryDropAction implements IDropActionDelegate {
             dropFolder = (IContainer) target;
         } else if ( target instanceof IFile ) {
             dropFolder = ((IFile) target).getParent();
-        } else if ( target instanceof IJavaProject ) {
+        }/* else if ( target instanceof IJavaProject ) {
             dropFolder = ((IJavaProject) target).getProject();
         } else if ( target instanceof IJavaElement ) {
             IJavaElement j = (IJavaElement) target;
@@ -49,7 +49,7 @@ public class S3ObjectSummaryDropAction implements IDropActionDelegate {
                 AwsToolkitCore.getDefault().logException("Couldn't determine java resource", e);
                 return false;
             }
-        } else {
+        } */else {
             return false;
         }
 
