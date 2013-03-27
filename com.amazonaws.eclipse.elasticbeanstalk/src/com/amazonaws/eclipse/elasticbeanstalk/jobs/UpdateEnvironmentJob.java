@@ -257,7 +257,7 @@ public class UpdateEnvironmentJob extends Job {
 
             IVMConnector debuggerConnector = JavaRuntime.getDefaultVMConnector();
 
-            Map<String, Object> arguments = new HashMap<String, Object>();
+            Map<String, String> arguments = new HashMap<String, String>();
             arguments.put("timeout", "60000");
             arguments.put("hostname", getEc2InstanceHostname());
             arguments.put("port", debugPort);
